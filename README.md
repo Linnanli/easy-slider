@@ -1,6 +1,10 @@
 # simple-slider
 
-    一个简单的图片轮播插件,支持IE9及以上,压缩后代码 5.39kb
+一个简单的图片轮播插件,支持IE9及以上,压缩后代码 5.39kb
+
+## demo 地址
+
+[demo](https://linnanli.github.io/simple-slider/index.html)
 
 ### 如何使用
 
