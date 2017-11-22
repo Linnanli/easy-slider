@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>simple slider demo</title>
+    <script src="./dist/js/slider.js"></script>
+    <link rel="stylesheet" href="./dist/style/slider.css">
+</head>
+<style>
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin:0;
+        padding: 0;
+    }
+    .box{
+        width: 100%;
+        height: 500px;
+    }
+</style>
+<body>
+    <div class="box">
+        <div id="slider" class="ui-slider" style="width:500px;margin:0 auto;" data-auto-play="2000">
+            <a class="ui-slider-item" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509985456407&di=f97d26b2a82d71b020433671935ab486&imgtype=0&src=http%3A%2F%2Fdl.bizhi.sogou.com%2Fimages%2F2014%2F03%2F07%2F537237.jpg" 
+                                      data-src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509985456407&di=f97d26b2a82d71b020433671935ab486&imgtype=0&src=http%3A%2F%2Fdl.bizhi.sogou.com%2Fimages%2F2014%2F03%2F07%2F537237.jpg'></a>
+            <div class="ui-slider-item" data-src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2813171511,1702575389&fm=27&gp=0.jpg'></div>
+            <div class="ui-slider-item" data-src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509985341435&di=8c0fbe17f10f71f0a7859a9c0766a5c0&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fpeople%2F201409%2F20%2F20140920195146_3RWwd.jpeg'></div>
+            <div class="ui-slider-item" data-src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509985492367&di=c9f7058cdbb485477c62a68705621682&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F8d5494eef01f3a29b2790d2d9325bc315d607ca4.jpg'></div>
+            <div class="ui-slider-item" data-src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509985511866&di=f623290b3590caa14afcb49d28b79288&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F3b87e950352ac65c70f6afbefff2b21192138a08.jpg'></div> 
+        </div>
+    </div>
+</body>
+<script>
+    //全局属性,所有的实例都会继承该属性
+    Slider.operate = 'dblclick';
+
+    var slider = new Slider({
+        id:'slider',//指定元素id
+        index:2,//初始化展示子项
+        operate:'mouseover',//定义手动切换事件类型,参数传入会覆盖全局属性
+        autoPlay:3000,//自动切换时间间隔
+        complete:function(){
+            console.log('初始化完成!');
+        }
+    });
+
+    slider.on('toggle',function(){
+        console.log('切换完成,当前子项的索引为:'+this.$index);
+    });
+</script>
+</html>
