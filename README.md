@@ -1,4 +1,4 @@
-# simple-slider
+# easy-slider
 
 一个简单的图片轮播插件,支持IE9及以上,压缩后代码 2.5kb左右
 
